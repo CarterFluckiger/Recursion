@@ -29,16 +29,23 @@ int main()
         std::cout<<"Empty"<<std::endl;
     }
     Program.Push(4);
+      std::cout<<Program.Top()<<std::endl;
     Program.Push(34);
+    std::cout<<Program.Top()<<std::endl;
     Program.Push(99);
-    Program.Pop();
+      std::cout<<Program.Top()<<std::endl;
     Program.Push(98);
+      std::cout<<Program.Top()<<std::endl;
+      std::cout<<" End of first list: "<<std::endl;
 
     recursion(Program, New_Program);
 
     return 0;
 }
 
+// Pre-conditions- Just that it must enter the main
+//  Also the arguments must exist
+// Post-conditions- If their are items on the list it reverses the order on a new list called New_Program
 void recursion(Stack Program,Stack New_Program)
 {
     //Checks to see if it is empty so it can skip it if it is
